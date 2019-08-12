@@ -1,6 +1,9 @@
 Version history for {{$dist->name}}:
 
 {{$NEXT}}
+  [Documentation]
+  - Link to Catalyst::Request from SEE ALSO.
+
   [Tests]
   - Remove unnecessary test prereqs.
 

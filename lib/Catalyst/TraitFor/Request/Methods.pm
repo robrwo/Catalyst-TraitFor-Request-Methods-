@@ -88,4 +88,10 @@ foreach my $name (qw/ get head post put delete connect options trace patch /) {
 
 }
 
+=head1 SEE ALSO
+
+L<Catalyst::Request>
+
+=cut
+
 1;

@@ -72,6 +72,10 @@ The request method is `TRACE`.
 
 The request method is `PATCH`.
 
+# SEE ALSO
+
+[Catalyst::Request](https://metacpan.org/pod/Catalyst::Request)
+
 # SOURCE
 
 The development version is on github at [https://github.com/robrwo/Catalyst-TraitFor-Request-Methods-](https://github.com/robrwo/Catalyst-TraitFor-Request-Methods-)
