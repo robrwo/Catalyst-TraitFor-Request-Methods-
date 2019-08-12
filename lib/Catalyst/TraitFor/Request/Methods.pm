@@ -10,6 +10,8 @@ use namespace::autoclean;
 
 requires 'method';
 
+our $VERSION = 'v0.1.0';
+
 =head1 SYNOPSIS
 
 In the L<Catalyst> class
