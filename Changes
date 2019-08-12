@@ -4,6 +4,8 @@ Version history for {{$dist->name}}:
   [Documentation]
   - Link to Catalyst::Request from SEE ALSO.
 
+  - Elaborated on use case for this module.
+
   [Tests]
   - Remove unnecessary test prereqs.
 

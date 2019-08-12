@@ -36,6 +36,14 @@ checking the HTTP request method.
 Using these methods is a less error-prone alternative to checking a
 case-sensitive string with the method name.
 
+In other words, you can use
+
+  $c->request->is_get
+
+instead of
+
+  $c->request->method eq "GET"
+
 =method is_get
 
 The request method is C<GET>.
