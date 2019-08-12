@@ -1,3 +1,4 @@
+requires "Catalyst::Request" => "0";
 requires "Moose::Role" => "0";
 requires "Sub::Util" => "1.40";
 requires "namespace::autoclean" => "0";
@@ -7,14 +8,10 @@ on 'test' => sub {
   requires "Catalyst::Test" => "0";
   requires "File::Spec" => "0";
   requires "HTTP::Request::Common" => "0";
-  requires "JSON::PP" => "2.00";
   requires "Module::Metadata" => "0";
   requires "Moose" => "0";
-  requires "Path::Tiny" => "0.004";
   requires "Test::More" => "0";
   requires "Test::Most" => "0";
-  requires "Time::Piece" => "1.16";
-  requires "Time::Seconds" => "0";
 };
 
 on 'test' => sub {
