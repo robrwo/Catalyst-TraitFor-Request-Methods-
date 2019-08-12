@@ -76,7 +76,7 @@ The request method is C<PATCH>.
 
 foreach my $name (qw/ get head post put delete connect options trace patch /) {
 
-    no strict 'refs';
+    no strict 'refs'; ## no critic (ProhibitNoStrict)
 
     my $value = uc $name;
     my $method = __PACKAGE__ . "::is_$name";
