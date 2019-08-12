@@ -1,5 +1,7 @@
 package Catalyst::TraitFor::Request::Methods;
 
+# ABSTRACT: Add enumerated methods for HTTP requests
+
 use Moose::Role;
 
 use Sub::Util 1.40 qw/ set_subname /;
