@@ -28,9 +28,51 @@ In any code that uses a L<Catalyst::Request>, e.g.
      ...
  }
 
-=cut
+=head1 DESCRIPTION
 
-# Methods from RFC 7231 and RFC 5789.
+This trait adds enumerated methods from RFC 7231 and RFC 5789 for
+checking the HTTP request method.
+
+Using these methods is a less error-prone alternative to checking a
+case-sensitive string with the method name.
+
+=method is_get
+
+The request method is C<GET>.
+
+=method is_head
+
+The request method is C<HEAD>.
+
+=method is_post
+
+The request method is C<POST>.
+
+=method is_put
+
+The request method is C<PUT>.
+
+=method is_delete
+
+The request method is C<DELETE>.
+
+=method is_connect
+
+The request method is C<CONNECT>.
+
+=method is_options
+
+The request method is C<OPTIONS>.
+
+=method is_trace
+
+The request method is C<TRACE>.
+
+=method is_patch
+
+The request method is C<PATCH>.
+
+=cut
 
 foreach my $name (qw/ get head post put delete connect options trace patch /) {
 
