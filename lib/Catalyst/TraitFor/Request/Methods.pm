@@ -8,6 +8,24 @@ use namespace::autoclean;
 
 requires 'method';
 
+=head1 SYNOPSIS
+
+In the L<Catalyst> class
+
+  __PACKAGE__->config(
+    request_class_traits => [
+        'Methods'
+    ]
+  );
+
+In any code that uses a L<Catalyst::Request>, e.g.
+
+ if ($c->request->is_post) {
+     ...
+ }
+
+=cut
+
 # Methods from RFC 7231 and RFC 5789.
 
 foreach my $name (qw/ get head post put delete connect options trace patch /) {
