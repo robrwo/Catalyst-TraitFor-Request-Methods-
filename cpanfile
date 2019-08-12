@@ -1,10 +1,10 @@
-requires "Catalyst::Request" => "0";
+requires "Catalyst" => "5.90090";
 requires "Moose::Role" => "0";
 requires "Sub::Util" => "1.40";
 requires "namespace::autoclean" => "0";
 
 on 'test' => sub {
-  requires "Catalyst" => "0";
+  requires "Catalyst" => "5.90090";
   requires "Catalyst::Test" => "0";
   requires "File::Spec" => "0";
   requires "HTTP::Request::Common" => "0";

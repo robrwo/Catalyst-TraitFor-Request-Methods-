@@ -1,6 +1,9 @@
 Version history for {{$dist->name}}:
 
 {{$NEXT}}
+  [Bug Fixes]
+  - Specify a minimum Catalyst version.
+
   [Documentation]
   - Link to Catalyst::Request from SEE ALSO.
 
@@ -8,9 +11,6 @@ Version history for {{$dist->name}}:
 
   [Tests]
   - Remove unnecessary test prereqs.
-
-  [Other]
-  - Explicitly specify Catalyst::Request as a prereq.
 
 v0.1.0    2019-08-12 13:20:13+01:00 Europe/London
   - Initial version released.
