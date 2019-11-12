@@ -1,6 +1,8 @@
 Version history for {{$dist->name}}:
 
 {{$NEXT}}
+
+v0.2.0    2019-11-12 08:54:51+00:00 Europe/London (TRIAL RELEASE)
   [Enhancements]
   - The methods have been rewritten as lazy, read-only attributes.
 
