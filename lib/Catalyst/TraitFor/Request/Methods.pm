@@ -4,13 +4,13 @@ package Catalyst::TraitFor::Request::Methods;
 
 use Moose::Role;
 
-use Sub::Util 1.40 qw/ set_subname /;
+use MooseX::MungeHas;
 
 use namespace::autoclean;
 
 requires 'method';
 
-our $VERSION = 'v0.1.2';
+our $VERSION = 'v0.2.0';
 
 =head1 SYNOPSIS
 
@@ -43,6 +43,8 @@ In other words, you can use
 instead of
 
   $c->request->method eq "GET"
+
+The methods are implemented as lazy read-only attributes.
 
 =method is_get
 
@@ -84,15 +86,13 @@ The request method is C<PATCH>.
 
 foreach my $name (qw/ get head post put delete connect options trace patch /) {
 
-    no strict 'refs'; ## no critic (ProhibitNoStrict)
+    my $value  = uc $name;
+    my $method = "is_$name";
 
-    my $value = uc $name;
-    my $method = __PACKAGE__ . "::is_$name";
-
-    *{$method} = set_subname $method => sub {
-        my ($self) = @_;
-        return $self->method eq $value;
-    };
+    has $method => (
+        is      => 'lazy',
+        builder => sub { $_[0]->method eq $value },
+    );
 
 }
 

@@ -1,6 +1,6 @@
 requires "Catalyst" => "5.90090";
 requires "Moose::Role" => "0";
-requires "Sub::Util" => "1.40";
+requires "MooseX::MungeHas" => "0";
 requires "namespace::autoclean" => "0";
 
 on 'test' => sub {
