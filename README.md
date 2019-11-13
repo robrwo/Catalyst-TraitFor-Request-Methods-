@@ -4,7 +4,7 @@ Catalyst::TraitFor::Request::Methods - Add enumerated methods for HTTP requests
 
 # VERSION
 
-version v0.2.0
+version v0.2.1
 
 # SYNOPSIS
 
