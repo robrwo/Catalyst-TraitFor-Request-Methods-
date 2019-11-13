@@ -4,8 +4,6 @@ package Catalyst::TraitFor::Request::Methods;
 
 use Moose::Role;
 
-use MooseX::MungeHas;
-
 use namespace::autoclean;
 
 requires 'method';
@@ -86,12 +84,13 @@ The request method is C<PATCH>.
 
 foreach my $name (qw/ get head post put delete connect options trace patch /) {
 
-    my $value  = uc $name;
+    my $value = uc $name;
     my $method = "is_$name";
 
     has $method => (
-        is      => 'lazy',
-        builder => sub { $_[0]->method eq $value },
+        is      => 'ro',
+        lazy    => 1,
+        default => sub { return $_[0]->method eq $value },
     );
 
 }
