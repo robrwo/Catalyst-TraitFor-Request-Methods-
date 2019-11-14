@@ -8,7 +8,7 @@ use namespace::autoclean;
 
 requires 'method';
 
-our $VERSION = 'v0.2.2';
+our $VERSION = 'v0.2.3';
 
 =head1 SYNOPSIS
 
