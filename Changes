@@ -1,6 +1,11 @@
 Version history for {{$dist->name}}:
 
 {{$NEXT}}
+  [Enhancements]
+  - The methods have been rewritten as lazy, read-only attributes.
+
+  [Other]
+  - Remove the use of Sub::Util.
 
 v0.2.1    2019-11-13 13:28:00+00:00 Europe/London (TRIAL RELEASE)
   [Enhancements]
