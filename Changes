@@ -1,6 +1,8 @@
 Version history for {{$dist->name}}:
 
 {{$NEXT}}
+  [Documentation]
+  - Updated copyright year.
 
 v0.2.2    2019-11-14 17:34:10+00:00 Europe/London
   [Enhancements]
