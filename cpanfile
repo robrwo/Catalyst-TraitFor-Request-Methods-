@@ -14,6 +14,9 @@ on 'test' => sub {
   requires "Moose" => "0";
   requires "Test::More" => "0";
   requires "Test::Most" => "0";
+  requires "lib" => "0";
+  requires "strict" => "0";
+  requires "warnings" => "0";
 };
 
 on 'test' => sub {

@@ -4,6 +4,9 @@ Version history for {{$dist->name}}:
   [Documentation]
   - Updated copyright year.
 
+  [Toolchain]
+  - Add core modules in the prerequisites.
+
 v0.2.2    2019-11-14 17:34:10+00:00 Europe/London
   [Enhancements]
   - The methods have been rewritten as lazy, read-only attributes.
