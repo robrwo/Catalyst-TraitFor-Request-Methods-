@@ -2,7 +2,11 @@ package Catalyst::TraitFor::Request::Methods;
 
 # ABSTRACT: Add enumerated methods for HTTP requests
 
+use v5.10.1;
+
 use Moose::Role;
+
+use Data::Enum;
 
 use namespace::autoclean;
 
@@ -82,18 +86,17 @@ The request method is C<PATCH>.
 
 =cut
 
-foreach my $name (qw/ get head post put delete connect options trace patch /) {
+my @METHODS = qw/ get head post put delete connect options trace patch /;
 
-    my $value = uc $name;
-    my $method = "is_$name";
-
-    has $method => (
-        is      => 'ro',
-        lazy    => 1,
-        default => sub { return $_[0]->method eq $value },
-    );
-
-}
+has _method_enum => (
+    is => 'ro',
+    lazy => 1,
+    default => sub {
+        state $enum = Data::Enum->new(@METHODS);
+        return $enum->new( lc $_[0]->method );
+    },
+    handles => [ map { "is_" . $_ } @METHODS ],
+);
 
 =head1 SEE ALSO
 
