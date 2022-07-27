@@ -18,7 +18,7 @@ __PACKAGE__->config(
 );
 ```
 
-In any code that uses a [Catalyst::Request](https://metacpan.org/pod/Catalyst::Request), e.g.
+In any code that uses a [Catalyst::Request](https://metacpan.org/pod/Catalyst%3A%3ARequest), e.g.
 
 ```
 if ($c->request->is_post) {
@@ -88,7 +88,7 @@ The request method is `PATCH`.
 
 # SEE ALSO
 
-[Catalyst::Request](https://metacpan.org/pod/Catalyst::Request)
+[Catalyst::Request](https://metacpan.org/pod/Catalyst%3A%3ARequest)
 
 # SOURCE
 
