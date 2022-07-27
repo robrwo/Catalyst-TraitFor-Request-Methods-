@@ -12,7 +12,7 @@ use namespace::autoclean;
 
 requires 'method';
 
-our $VERSION = 'v0.2.4';
+our $VERSION = 'v0.3.0';
 
 =head1 SYNOPSIS
 
