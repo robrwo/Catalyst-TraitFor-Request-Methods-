@@ -84,17 +84,13 @@ The request method is C<TRACE>.
 
 The request method is C<PATCH>.
 
-=method is_propfind
-
-The request method is C<PROPFIND>.
-
 =method is_unrecognized_method
 
 The request method is not recognized.
 
 =cut
 
-my @METHODS = qw/ get head post put delete connect options trace patch propfind unrecognized_method /;
+my @METHODS = qw/ get head post put delete connect options trace patch unrecognized_method /;
 
 has _method_enum => (
     is => 'ro',

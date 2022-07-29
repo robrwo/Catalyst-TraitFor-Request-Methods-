@@ -4,6 +4,8 @@ Version history for {{$dist->name}}:
   [Incompatible Changes]
   - This now requires Perl 5.14 or later.
 
+  - Removed is_propfind. A better way is needed for handling HTTP extension methods.
+
   [Other]
   - Internal code improvements.
 
