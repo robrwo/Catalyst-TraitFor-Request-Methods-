@@ -86,6 +86,10 @@ The request method is `TRACE`.
 
 The request method is `PATCH`.
 
+## is\_propfind
+
+The request method is `PROPFIND`.
+
 # SEE ALSO
 
 [Catalyst::Request](https://metacpan.org/pod/Catalyst%3A%3ARequest)

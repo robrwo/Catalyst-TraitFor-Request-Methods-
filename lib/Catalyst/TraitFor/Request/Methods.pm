@@ -84,9 +84,13 @@ The request method is C<TRACE>.
 
 The request method is C<PATCH>.
 
+=method is_propfind
+
+The request method is C<PROPFIND>.
+
 =cut
 
-my @METHODS = qw/ get head post put delete connect options trace patch /;
+my @METHODS = qw/ get head post put delete connect options trace patch propfind /;
 
 has _method_enum => (
     is => 'ro',

@@ -1,6 +1,8 @@
 Version history for {{$dist->name}}:
 
 {{$NEXT}}
+  [Enhancements]
+  - Added support for the PROPFIND method.
 
 v0.3.0    2022-07-27 12:53:55+01:00 Europe/London
   [Enhancements]
