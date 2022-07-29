@@ -2,7 +2,7 @@ package Catalyst::TraitFor::Request::Methods;
 
 # ABSTRACT: Add enumerated methods for HTTP requests
 
-use v5.10.1;
+use v5.14;
 
 use Moose::Role;
 
@@ -101,9 +101,7 @@ has _method_enum => (
     lazy => 1,
     default => sub {
         state $enum = Data::Enum->new(@METHODS);
-        my $method = $_[0]->method;
-        $method =~ s/\W/_/g;
-        return eval { $enum->new(lc $method) } // $enum->new('unrecognized_method');
+        return eval { $enum->new(lc $_[0]->method =~ s/\W/_/gr) } // $enum->new('unrecognized_method');
     },
     handles => [ map { "is_" . $_ } @METHODS ],
 );

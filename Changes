@@ -1,6 +1,11 @@
 Version history for {{$dist->name}}:
 
 {{$NEXT}}
+  [Incompatible Changes]
+  - This now requires Perl 5.14 or later.
+
+  [Other]
+  - Internal code improvements.
 
 v0.3.2    2022-07-29 16:46:23+01:00 Europe/London
   [Enhancements]
