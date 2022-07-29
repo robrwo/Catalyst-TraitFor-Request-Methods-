@@ -11,6 +11,7 @@ on 'test' => sub {
   requires "Catalyst" => "5.90090";
   requires "Catalyst::Test" => "0";
   requires "File::Spec" => "0";
+  requires "HTTP::Request" => "0";
   requires "HTTP::Request::Common" => "0";
   requires "Module::Metadata" => "0";
   requires "Moose" => "0";

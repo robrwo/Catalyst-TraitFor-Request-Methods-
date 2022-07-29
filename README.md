@@ -90,6 +90,10 @@ The request method is `PATCH`.
 
 The request method is `PROPFIND`.
 
+## is\_unrecognized\_method
+
+The request method is not recognized.
+
 # SEE ALSO
 
 [Catalyst::Request](https://metacpan.org/pod/Catalyst%3A%3ARequest)

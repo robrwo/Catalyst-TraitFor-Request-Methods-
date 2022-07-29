@@ -88,16 +88,22 @@ The request method is C<PATCH>.
 
 The request method is C<PROPFIND>.
 
+=method is_unrecognized_method
+
+The request method is not recognized.
+
 =cut
 
-my @METHODS = qw/ get head post put delete connect options trace patch propfind /;
+my @METHODS = qw/ get head post put delete connect options trace patch propfind unrecognized_method /;
 
 has _method_enum => (
     is => 'ro',
     lazy => 1,
     default => sub {
         state $enum = Data::Enum->new(@METHODS);
-        return $enum->new( lc $_[0]->method );
+        my $method = $_[0]->method;
+        $method =~ s/\W/_/g;
+        return eval { $enum->new(lc $method) } // $enum->new('unrecognized_method');
     },
     handles => [ map { "is_" . $_ } @METHODS ],
 );
