@@ -86,10 +86,6 @@ The request method is `TRACE`.
 
 The request method is `PATCH`.
 
-## is\_propfind
-
-The request method is `PROPFIND`.
-
 ## is\_unrecognized\_method
 
 The request method is not recognized.
