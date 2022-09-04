@@ -1,6 +1,8 @@
 Version history for {{$dist->name}}:
 
 {{$NEXT}}
+
+v0.4.0    2022-09-04 16:11:27+01:00 Europe/London
   [Incompatible Changes]
   - This now requires Perl 5.14 or later.
 
