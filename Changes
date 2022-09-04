@@ -9,6 +9,8 @@ Version history for {{$dist->name}}:
   [Other]
   - Internal code improvements.
 
+  - Sign release.
+
 v0.3.2    2022-07-29 16:46:23+01:00 Europe/London
   [Enhancements]
   - Add is_unrecognized_method method.
