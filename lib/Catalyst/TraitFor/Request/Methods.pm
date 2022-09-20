@@ -5,8 +5,7 @@ package Catalyst::TraitFor::Request::Methods;
 use v5.14;
 
 use Moose::Role;
-
-use Data::Enum;
+use List::Util 1.33 qw/ none /;
 
 use namespace::autoclean;
 
@@ -84,22 +83,36 @@ The request method is C<TRACE>.
 
 The request method is C<PATCH>.
 
+=cut
+
+my @METHODS = qw/ get head post put delete connect options trace patch /;
+
+for my $method (@METHODS) {
+    has my $name = "is_" . $method => (
+        is => 'ro',
+        lazy => 1,
+        default => sub {
+            my ($self) = @_;
+            my $this = lc $self->method =~ s/\W/_/gr;
+            return $this eq $method;
+        },
+    );
+}
+
 =method is_unrecognized_method
 
 The request method is not recognized.
 
 =cut
 
-my @METHODS = qw/ get head post put delete connect options trace patch unrecognized_method /;
-
-has _method_enum => (
+has is_unrecognized_method => (
     is => 'ro',
     lazy => 1,
     default => sub {
-        state $enum = Data::Enum->new(@METHODS);
-        return eval { $enum->new(lc $_[0]->method =~ s/\W/_/gr) } // $enum->new('unrecognized_method');
+        my ($self) = @_;
+        my $this = lc $self->method =~ s/\W/_/gr;
+        return none { $this eq $_ } @METHODS;
     },
-    handles => [ map { "is_" . $_ } @METHODS ],
 );
 
 =head1 SEE ALSO

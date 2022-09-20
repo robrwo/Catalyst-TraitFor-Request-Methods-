@@ -1,6 +1,8 @@
 Version history for {{$dist->name}}:
 
 {{$NEXT}}
+  [Enhancements]
+  - Removed the use of Data::Enum, since it is slower than comparing strings.
 
 v0.4.0    2022-09-04 16:11:27+01:00 Europe/London
   [Incompatible Changes]
