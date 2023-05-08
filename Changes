@@ -1,6 +1,9 @@
 Version history for {{$dist->name}}:
 
 {{$NEXT}}
+  [Documentation]
+  - Bumped copyright year.
+
   [Tests]
   - Cleaned up prerequisite reports.
 
