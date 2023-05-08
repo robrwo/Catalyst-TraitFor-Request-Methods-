@@ -1,6 +1,8 @@
 Version history for {{$dist->name}}:
 
 {{$NEXT}}
+  [Tests]
+  - Cleaned up prerequisite reports.
 
 v0.5.0    2022-09-20 18:18:30+01:00 Europe/London
   [Enhancements]
