@@ -90,6 +90,12 @@ The request method is `PATCH`.
 
 The request method is not recognized.
 
+# SUPPORT FOR OLDER PERL VERSIONS
+
+This module requires Perl v5.14 or later.
+
+Future releases may only support Perl versions released in the last ten years.
+
 # SEE ALSO
 
 [Catalyst::Request](https://metacpan.org/pod/Catalyst%3A%3ARequest)

@@ -2,6 +2,8 @@ Version history for {{$dist->name}}:
 
 {{$NEXT}}
   [Documentation]
+  - Document support policy for older Perl versions.
+
   - Bumped copyright year.
 
   [Tests]

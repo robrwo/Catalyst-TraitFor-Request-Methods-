@@ -115,6 +115,12 @@ has is_unrecognized_method => (
     },
 );
 
+=head1 SUPPORT FOR OLDER PERL VERSIONS
+
+This module requires Perl v5.14 or later.
+
+Future releases may only support Perl versions released in the last ten years.
+
 =head1 SEE ALSO
 
 L<Catalyst::Request>
